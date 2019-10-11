@@ -12,9 +12,9 @@ from google.auth.transport.requests import Request
 # If modifying these scopes, delete the file token.pickle.
 SCOPES = ['https://www.googleapis.com/auth/calendar.readonly']
 
-owm = pyowm.OWM('0675955de1e5cb303ed513283b51175a', language = "ru")
+owm = pyowm.OWM('ID', language = "ru")
 
-bot = telebot.TeleBot("971546843:AAERjgQEMuzu8jQhTlfY5TheTzFmqgLyCJU")
+bot = telebot.TeleBot("ID")
 @bot.message_handler(content_types=['text'])
 def send_echo(message):
     place = 'Novosibirsk'
@@ -51,7 +51,7 @@ def send_echo(message):
             pickle.dump(creds, token)
 
     service = build('calendar', 'v3', credentials=creds)
-    CALENDAR_ID = 'tami5g20oecqipekok4f33eorg@group.calendar.google.com'
+    CALENDAR_ID = 'ID@group.calendar.google.com'
     # Call the Calendar API
     now = datetime.datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
     #   print('Getting the upcoming 10 events')
