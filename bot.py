@@ -63,7 +63,7 @@ def send_echo(message):
         start = event['start'].get('dateTime', event['start'].get('date'))
         answer += start + ' ' + event['summary'] + ' ' + event['description'] + '\n'
 
-    bot.send_message(message.char.id, answer)
+    bot.send_message(message.chat.id, answer)
 # @bot.message_handler(func=lambda message: True)
 # def echo_all(message):
 # 	bot.reply_to(message, message.text)
